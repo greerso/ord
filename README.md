@@ -95,6 +95,12 @@ The default location for the `ord` binary once built is `./target/release/ord`.
 
 `ord` requires `rustc` version 1.67.0 or later. Run `rustc --version` to ensure you have this version. Run `rustup update` to get the latest stable release.
 
+To build and run `ord` from docker:
+
+```
+docker build -t ord:latest https://github.com/greerso/ord.git
+docker run -v "${APP_BITCOIN_DATA_DIR}:/data/.bitcoin" -v "${APP_DATA_DIR}/data/ord:/data" ord:latest
+```
 
 Syncing
 -------
